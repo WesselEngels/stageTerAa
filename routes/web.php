@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/', 'CompaniesController@index');
+Route::get('/create', 'CompaniesController@create');
+Route::post('/', 'CompaniesController@store'); 
+
