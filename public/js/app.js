@@ -1850,11 +1850,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'stageFilter'
+});
 
 /***/ }),
 
@@ -19479,36 +19477,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "navbar navbar-expand-sm bg-light" }, [
-      _c("ul", { staticClass: "navbar-nav" }, [
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-            _vm._v("Link 2")
-          ])
-        ]),
+  return _c(
+    "nav",
+    { staticClass: "navbar navbar-expand-sm bg-dark text-light" },
+    [
+      _c("div", { staticClass: "form-group row" }, [
+        _c("label", { attrs: { for: "education_id" } }, [_vm._v("Education")]),
         _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-            _vm._v("Link 2")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
-          _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-            _vm._v("Link 3")
-          ])
-        ])
+        _c(
+          "select",
+          { staticClass: "form-control", attrs: { name: "dropDown" } },
+          [
+            _c("option", [_vm._v("Select here")]),
+            _vm._v(" "),
+            _vm._l(_vm.optionsEducation, function(education) {
+              return _c("option", [_vm._v(_vm._s(education))])
+            })
+          ],
+          2
+        )
       ])
-    ])
-  }
-]
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -31655,21 +31647,18 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_StageFilter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/StageFilter.vue */ "./resources/js/components/StageFilter.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-
-
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('stageFilter', _components_StageFilter_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
-var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
-  el: '#app'
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+Vue.component('stagefilter', __webpack_require__(/*! ./components/StageFilter.vue */ "./resources/js/components/StageFilter.vue")["default"]);
+var app = new Vue({
+  el: '#app',
+  data: {
+    optionsEducation: [1, 2, 3, 4]
+  }
 });
 
 /***/ }),
@@ -31782,7 +31771,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\r\n@import 'variables';\r\n       ^\r\n      Can't find stylesheet to import.\n  ╷\n4 │ @import 'variables';\n  │         ^^^^^^^^^^^\n  ╵\n  stdin 4:9  root stylesheet\r\n      in C:\\laragon\\www\\stageTerAa\\resources\\sass\\app.scss (line 4, column 9)\n    at runLoaders (C:\\laragon\\www\\stageTerAa\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\laragon\\www\\stageTerAa\\node_modules\\sass-loader\\dist\\index.js:89:7)\n    at Function.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:54337:16)\n    at _render_closure1.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:33509:12)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18410:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17809:12)\n    at Object._asyncRethrow (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3240:17)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:10537:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17830:12)\n    at _awaitOnObject_closure0.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17822:25)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18410:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17809:12)\n    at Object._asyncRethrow (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3240:17)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:12240:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17830:12)\n    at _awaitOnObject_closure0.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17822:25)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)");
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\r\n@import '~bootstrap/scss/bootstrap';\r\n       ^\r\n      Can't find stylesheet to import.\n  ╷\n6 │ @import '~bootstrap/scss/bootstrap';\n  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  ╵\n  stdin 6:9  root stylesheet\r\n      in C:\\laragon\\www\\stageTerAa\\resources\\sass\\app.scss (line 6, column 9)\n    at runLoaders (C:\\laragon\\www\\stageTerAa\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\laragon\\www\\stageTerAa\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\laragon\\www\\stageTerAa\\node_modules\\sass-loader\\dist\\index.js:89:7)\n    at Function.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:54337:16)\n    at _render_closure1.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:33509:12)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18410:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17809:12)\n    at Object._asyncRethrow (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3240:17)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:10537:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17830:12)\n    at _awaitOnObject_closure0.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17822:25)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18410:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17809:12)\n    at Object._asyncRethrow (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3240:17)\n    at C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:12240:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17830:12)\n    at _awaitOnObject_closure0.call$2 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:17822:25)\n    at _RootZone.runBinary$3$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19817:18)\n    at _RootZone.runBinary$3 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:19821:19)\n    at _FutureListener.handleError$1 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18286:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:18574:40)\n    at Object._Future__propagateToListeners (C:\\laragon\\www\\stageTerAa\\node_modules\\sass\\sass.dart.js:3484:88)");
 
 /***/ }),
 

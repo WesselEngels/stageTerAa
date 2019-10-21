@@ -74,6 +74,11 @@ body {
     color: #212529;
     text-align: left;
     background-color: #ffffff;
+    background-image: url("/storage/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 [tabindex="-1"]:focus {
@@ -6572,7 +6577,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-    background-color: #f8f9fa !important;
+    background-color: rgba(248, 249, 250, 0.8) !important;
 }
 
 a.bg-light:hover,
