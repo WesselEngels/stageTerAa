@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <div id="app">
+  <div id="navbar">
     <div class="bg-img">
       <div class="container">
         <div class="container-text">
@@ -33,11 +33,11 @@
 
     </div>
     <stageFilter></stageFilter>
-
+</div>
     <main class="py-4">
       @yield('content')
     </main>
-  </div>
+  
 </body>
 
 </html>

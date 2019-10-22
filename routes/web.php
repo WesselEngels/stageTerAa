@@ -19,3 +19,5 @@ Route::get('/', 'CompaniesController@index');
 Route::get('/create', 'CompaniesController@create');
 Route::post('/', 'CompaniesController@store'); 
 
+Route::get('/detail/{id}',"DetailController@index" );
+

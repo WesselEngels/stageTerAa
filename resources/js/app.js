@@ -1,10 +1,5 @@
 require('./bootstrap');
 
-import Vue from 'vue'
-import StageFilter from './components/StageFilter.vue'
+window.Vue = require('vue');
 
-Vue.component('stageFilter', StageFilter)
-
-const app = new Vue({
-    el: '#app'
-})
+Vue.component('stagefilter', require('./components/StageFilter.vue').default);

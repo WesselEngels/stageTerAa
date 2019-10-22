@@ -7,7 +7,7 @@
     <form action="/" enctype="multipart/form-data" method="post">
     @csrf
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-12 offset-10 p-5 bg-light text-dark">
                 <div class="row">
                     <h1>New Company</h1>
                 </div>
@@ -48,6 +48,11 @@
                     <label for="education" class="col-md-4 col-form-label">Education</label>
                     <input id="education" type="text" class="form-control {{ $errors->has('education') ? ' is-invalid' : ''}} "
                      name="education" value="{{ old('education') }}" autocomplete="education" autofocus>
+                     @foreach($educations ?? '' as $education)
+                     <select name="education" id="">
+                         <option value="">{{ $education }}</option>
+                     </select>
+                     @endforeach
 
                     @if ($errors->has('education'))
                     <span class="invalid-feedback" role="alert">

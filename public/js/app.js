@@ -1850,8 +1850,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'stageFilter'
+  name: 'StageFilter'
 });
 
 /***/ }),
@@ -19486,12 +19487,12 @@ var render = function() {
         _vm._v(" "),
         _c(
           "select",
-          { staticClass: "form-control", attrs: { name: "dropDown" } },
+          { staticClass: "form-control" },
           [
-            _c("option", [_vm._v("Select here")]),
+            _c("option", [_vm._v("select")]),
             _vm._v(" "),
-            _vm._l(_vm.optionsEducation, function(education) {
-              return _c("option", [_vm._v(_vm._s(education))])
+            _vm._l(_vm.options, function(option) {
+              return _c("option")
             })
           ],
           2
@@ -31654,10 +31655,20 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('stagefilter', __webpack_require__(/*! ./components/StageFilter.vue */ "./resources/js/components/StageFilter.vue")["default"]);
-var app = new Vue({
-  el: '#app',
+new Vue({
+  el: '#navbar',
   data: {
-    optionsEducation: [1, 2, 3, 4]
+    selected: 'A',
+    options: [{
+      text: 'One',
+      value: 'A'
+    }, {
+      text: 'Two',
+      value: 'B'
+    }, {
+      text: 'Three',
+      value: 'C'
+    }]
   }
 });
 
