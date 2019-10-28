@@ -9,7 +9,12 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    const Admin_type = 'admin';
+    const Default_type = 'default';
 
+    public function isAdmin() {
+        return $this->type === self::Admin_type;
+    }
     /**
      * The attributes that are mass assignable.
      *

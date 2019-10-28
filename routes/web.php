@@ -11,13 +11,30 @@
 |
 */
 
+use App\Mail\InternMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/contact', function() {
+    return view('contact');
+});
+
+Route::post('/contact', function(Request $request){
+    Mail::send(new InternMail($request));
+    return redirect('/');
+});
 Route::get('/', 'CompaniesController@index');
+
 Route::get('/create', 'CompaniesController@create');
-Route::post('/', 'CompaniesController@store'); 
+Route::get('/create', 'OptionsController@index');
+Route::post('/', 'CompaniesController@store');
 
-Route::get('/detail/{id}',"DetailController@index" );
 
+Route::get('/detail/{id}',"DetailController@index");
+
+Route::get('/{id}/edit', 'OptionsController@edit');
+Route::patch('/{id}', 'CompaniesController@update');

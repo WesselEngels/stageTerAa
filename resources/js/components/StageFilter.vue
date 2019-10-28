@@ -4,7 +4,6 @@
       <label for="education_id">Education</label>
       <select class="form-control">
         <option>select</option>
-<option v-for="optie in options" :key="optie.value"></option>
 </select >
     </div>
   </nav>
