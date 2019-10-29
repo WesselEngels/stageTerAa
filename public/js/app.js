@@ -1847,6 +1847,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  methods: {
+    availableClick: function availableClick() {
+      axios.post('edit/available/').then(function (response) {
+        console.log(response.data);
+      });
+    }
   }
 });
 
@@ -37158,20 +37165,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-secondary ml-5",
+        on: { click: _vm.availableClick }
+      },
+      [_vm._v("Beschikbaarheid")]
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("button", { staticClass: "btn btn-secondary ml-5" }, [
-        _vm._v("Beschikbaarheid")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

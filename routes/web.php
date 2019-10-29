@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Mail;
 
 Auth::routes();
 
+
+
 Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
@@ -37,6 +39,8 @@ Route::post('/contact', function(Request $request){
     Mail::send(new InternMail($request));
     return redirect('/');
 });
+
+
 Route::get('/', 'CompaniesController@index');
 
 Route::get('/create', 'CompaniesController@create');
@@ -48,3 +52,5 @@ Route::get('/detail/{id}',"DetailController@index");
 
 Route::get('/{id}/edit', 'OptionsController@edit');
 Route::patch('/{id}', 'CompaniesController@update');
+
+Route::post('/{id}/edit/available', 'AvailableController@store');
