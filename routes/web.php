@@ -15,9 +15,19 @@ use App\Mail\InternMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
+Auth::routes();
+
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});
+
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/admin', 'AdminController@admin')    
+    ->middleware('is_admin')    
+    ->name('admin');
 
 Route::get('/contact', function() {
     return view('contact');

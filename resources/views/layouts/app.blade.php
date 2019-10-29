@@ -23,6 +23,21 @@
 
 <body>
   <div id="navbar">
+    
+  @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a class="ml-2" href="{{ url('/') }}">Home</a>
+                        <a class="float-right mr-2" href="{{ route('logout') }}">Logout</a>
+
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                    @endauth
+                </div>
+                
+            @endif
+
     <div class="bg-img">
       <div class="container">
         <div class="container-text">

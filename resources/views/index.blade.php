@@ -7,7 +7,10 @@
     <div class="row">
         
         <div class="col-8 offset-2 p-5 bg-light text-dark clearfix" >
+        @auth
         <a href="/{{ $company->id }}/edit ">Bewerken</a>
+@endauth
+        
         <img src="{{ $company->companyImage() }}" class="w-10 m-5 img-fluid float-right">
            <div class="">
            <h1 style="font-weight:bold">{{ $company->name }}</h1>

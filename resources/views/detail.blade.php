@@ -6,7 +6,9 @@
     <div class="row">
     @foreach($companies as $company)
         <div class="col-8 offset-2 p-5 bg-light text-dark clearfix">
-
+        @auth
+        <a href="/{{ $company->id }}/edit ">Bewerken</a>
+    @endauth
            
             <img src="/storage/{{ $company->image }}" class="mw-5 m-5 img-fluid float-right">
             <h1 style="font-weight:bold">{{ $company->name }}</h1>
