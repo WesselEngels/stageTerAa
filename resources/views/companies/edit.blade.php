@@ -10,7 +10,7 @@
         @method('PATCH')
         <div class="row">
             <div class="col-12 offset-10 p-5 bg-light text-dark">
-                <div class="row d-flex">
+                <div class="row d-flex" id="edit">
                     <h1>Edit Company</h1>
                     <available-button></available-button>
                 </div>

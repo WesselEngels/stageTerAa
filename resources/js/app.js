@@ -28,5 +28,5 @@ Vue.component('available-button', require('./components/AvailabilityButton.vue')
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#edit',
 });
