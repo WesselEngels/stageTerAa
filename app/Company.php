@@ -18,4 +18,8 @@ class Company extends Model
     {
         return $this->belongsTo('App\Details');
     }
+
+    public function available() {
+        return $this->belongsTo(User::class);
+    }
 }

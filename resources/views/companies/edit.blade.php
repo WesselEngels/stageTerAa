@@ -4,9 +4,6 @@
 
 <div class="container">
     @foreach($companies as $company)
-    <div id="edit">
-    <available-button></available-button>
-    </div>
     <form action="/{{ $company->id }}" enctype="multipart/form-data" method="post">
     
         @csrf
@@ -15,7 +12,10 @@
             <div class="col-12 offset-10 p-5 bg-light text-dark">
                 <div class="row d-flex">
                     <h1>Edit Company</h1>
-                   
+                    <div id="edit" class="ml-3">
+                    <available-button available="{{ $company->available }}"></available-button>
+                    </div>
+
                 </div>
                 
                

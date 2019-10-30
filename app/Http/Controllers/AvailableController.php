@@ -7,9 +7,21 @@ use App\Company;
 
 class AvailableController extends Controller
 {
-    public function store($id) 
+    public function store(Request $request) 
     {
-        $available = Company::where('id', $id)->get('adress');
-        return $available;
+        $company = Company::findOrFail($request->id);
+
+        if($company->available == 1){
+            $company->available = 0;
+        } else {
+            $company->available = 1;
+        }
+    
+        return response()->json([
+          'data' => [
+            'available' => $company->available,
+            'success' => $company->save(),
+          ]
+        ]);
     }
 }

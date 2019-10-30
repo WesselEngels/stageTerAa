@@ -28,6 +28,7 @@
                 <div class="top-right links">
                     @auth
                         <a class="ml-2" href="{{ url('/') }}">Home</a>
+                        <a class="ml-2" href="{{ url('/create') }}">Create</a>
                         <a class="float-right mr-2" href="{{ route('logout') }}">Logout</a>
 
                     @else
@@ -47,7 +48,9 @@
       </div>
 
     </div>
-    <stageFilter></stageFilter>
+    <div id="filter"> 
+    <stage-filter></stage-filter>
+    </div>
 </div>
     <main class="py-4">
       @yield('content')

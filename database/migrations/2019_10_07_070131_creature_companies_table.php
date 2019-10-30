@@ -26,6 +26,7 @@ class CreatureCompaniesTable extends Migration
             //web of applicatie kant
             $table->string('kind_of');
             $table->string('image')->nullable();
+            $table->boolean('available')->default();
             $table->timestamps();
         }); 
     }

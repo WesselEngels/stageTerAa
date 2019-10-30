@@ -1,31 +1,25 @@
 <template>
-  <nav class="navbar navbar-expand-sm bg-dark text-light">
+<div>
+  <!-- <nav class="navbar navbar-expand-sm bg-dark text-light">
     <div id="navbar" class="form-group row">
       <label for="education_id">Education</label>
       <select class="form-control">
         <option>select</option>
 </select >
     </div>
-  </nav>
+  </nav> -->
+  <label for="Hoi">Hoi</label>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'StageFilter'
+
+   mounted() {
+            console.log('Component mounted.')
+        },
 }
 
-
-new Vue({
-    el: '#navbar',
-    data: {
-        selected: 'A',
-        options: [
-            { text: 'One', value: 'A' },
-            { text: 'Two', value: 'B' },
-            { text: 'Three', value: 'C' }
-        ]
-    }
-})
 </script>
 
 <style lang="css">
