@@ -2,6 +2,8 @@
 
 @section('content')
 
+@if (Route::has('login'))
+@auth
 <div class="container">
     <form action="/" enctype="multipart/form-data" method="post">
         @csrf
@@ -118,4 +120,7 @@
         </div>
     </form>
 </div>
+@endauth
+                
+                @endif
 @endsection

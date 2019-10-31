@@ -2,6 +2,8 @@
 
 @section('content')
 
+@if (Route::has('login'))
+@auth
 <div class="container">
     @foreach($companies as $company)
     <form action="/{{ $company->id }}" enctype="multipart/form-data" method="post">
@@ -144,5 +146,8 @@
         </div>
     </form>
     @endforeach
+    @endauth
+                
+            @endif
 </div>
 @endsection

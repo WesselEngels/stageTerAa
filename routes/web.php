@@ -23,9 +23,9 @@ Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 Route::get('/admin', 'AdminController@admin')    
     ->middleware('is_admin')    

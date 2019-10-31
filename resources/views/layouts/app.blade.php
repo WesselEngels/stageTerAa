@@ -24,26 +24,29 @@
 <body>
   <div id="navbar">
     
-  @if (Route::has('login'))
-                <div class="top-right links">
+ 
+
+    <div class="bg-img">
+    @if (Route::has('login'))
+                <div class="top-right links text-light bg-dark">
                     @auth
-                        <a class="ml-2" href="{{ url('/') }}">Home</a>
-                        <a class="ml-2" href="{{ url('/create') }}">Create</a>
-                        <a class="float-right mr-2" href="{{ route('logout') }}">Logout</a>
+                        <a class="ml-2 my-1 btn btn-light" href="{{ url('/') }}">Home</a>
+                        <a class="ml-2 my-1  btn btn-light" href="{{ url('/create') }}">Create</a>
+                        <a class="float-right mr-2 my-1 btn btn-light" href="{{ route('logout') }}">Logout</a>
 
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="mr-2 my-1 btn btn-light" href="{{ route('login') }}">Login</a>
 
                     @endauth
                 </div>
                 
             @endif
-
-    <div class="bg-img">
       <div class="container">
         <div class="container-text">
+          <a style="text-decoration:none" href="{{ url('/') }}">
           <h1>Stage Ter Aa</h1>
           <h3>Vind hier de ideale stage!</h3>
+          </a>
         </div>
       </div>
 
