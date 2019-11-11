@@ -44,4 +44,19 @@ class OptionsController extends Controller
             'kindOf' => $kindOf
         ]);
     }
+
+    function filter()
+    {
+        $educations = DB::table('educations')->get();
+        $levels = DB::table('level')->get();
+        $grades = DB::table('grade')->get();
+        $kindOf = DB::table('kind_of')->get();
+
+        return view('layouts.app', [
+            'educations' => $educations,
+            'levels' => $levels,
+            'grades' => $grades,
+            'kindOf' => $kindOf
+        ]);
+    }
 }

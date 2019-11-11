@@ -35,7 +35,7 @@
                         <a class="float-right mr-2 my-1 btn btn-light" href="{{ route('logout') }}">Logout</a>
 
                     @else
-                        <a class="mr-2 my-1 btn btn-light" href="{{ route('login') }}">Login</a>
+                        <a class="ml-2 my-1 btn btn-light" href="{{ route('login') }}">Login</a>
 
                     @endauth
                 </div>
@@ -51,8 +51,9 @@
       </div>
 
     </div>
-    <div id="filter"> 
-    <stage-filter></stage-filter>
+    <div id="filter">
+     
+    
     </div>
 </div>
     <main class="py-4">

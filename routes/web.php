@@ -42,6 +42,7 @@ Route::post('/contact', function(Request $request){
 
 
 Route::get('/', 'CompaniesController@index');
+// Route::get('/', 'OptionsController@filter');
 
 Route::get('/create', 'CompaniesController@create');
 Route::get('/create', 'OptionsController@index');

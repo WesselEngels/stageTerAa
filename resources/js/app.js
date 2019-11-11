@@ -20,7 +20,10 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('available-button', require('./components/AvailabilityButton.vue').default);
-Vue.component('stage-filter', require('./components/StageFilter.vue').default);
+Vue.component('education-filter', require('./components/EducationFilter.vue').default);
+Vue.component('level-filter', require('./components/LevelFilter.vue').default);
+Vue.component('grade-filter', require('./components/GradeFilter.vue').default);
+Vue.component('kind-of-filter', require('./components/KindOfFilter.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

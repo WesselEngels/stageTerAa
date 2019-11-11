@@ -3,4 +3,4 @@
 {{ $email->companyAdress }} <br>
 </div>
 <hr>
-{{ $email->content }}<br>
+{{ nl2br($email->content) }}<br>
